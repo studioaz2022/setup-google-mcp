@@ -1,0 +1,6 @@
+*.json.bak
+gcp-oauth.keys.json
+creds-*.json
+token-*.json
+.gdrive-server-credentials.json
+node_modules/

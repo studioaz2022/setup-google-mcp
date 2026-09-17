@@ -1,0 +1,31 @@
+# Append to ~/.codex/config.toml. Replace LABEL and /Users/YOU.
+# Note: the ChatGPT desktop app rewrites this file — after adding these, restart
+# it and confirm the blocks are still present.
+
+[mcp_servers.gmail-LABEL]
+command = "npx"
+args = ["-y", "@gongrzhe/server-gmail-autoauth-mcp"]
+startup_timeout_sec = 60
+
+[mcp_servers.gmail-LABEL.env]
+GMAIL_OAUTH_PATH = "/Users/YOU/.gmail-mcp/gcp-oauth.keys.json"
+GMAIL_CREDENTIALS_PATH = "/Users/YOU/.gmail-mcp/creds-LABEL.json"
+
+[mcp_servers.gdrive-LABEL]
+command = "npx"
+args = ["-y", "@isaacphi/mcp-gdrive"]
+startup_timeout_sec = 60
+
+[mcp_servers.gdrive-LABEL.env]
+CLIENT_ID = "PASTE_CLIENT_ID"
+CLIENT_SECRET = "PASTE_CLIENT_SECRET"
+GDRIVE_CREDS_DIR = "/Users/YOU/.gdrive-mcp/LABEL"
+
+[mcp_servers.gcal-LABEL]
+command = "npx"
+args = ["-y", "@cocal/google-calendar-mcp"]
+startup_timeout_sec = 60
+
+[mcp_servers.gcal-LABEL.env]
+GOOGLE_OAUTH_CREDENTIALS = "/Users/YOU/.gcal-mcp/gcp-oauth.keys.json"
+GOOGLE_CALENDAR_MCP_TOKEN_PATH = "/Users/YOU/.gcal-mcp/token-LABEL.json"

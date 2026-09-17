@@ -1,0 +1,30 @@
+{
+  "_comment": "Merge the entries below into ~/.cursor/mcp.json. Keep any servers already there. Replace LABEL, and paste the real client id/secret from ~/.gmail-mcp/gcp-oauth.keys.json.",
+  "mcpServers": {
+    "gmail-LABEL": {
+      "command": "npx",
+      "args": ["-y", "@gongrzhe/server-gmail-autoauth-mcp"],
+      "env": {
+        "GMAIL_OAUTH_PATH": "/Users/YOU/.gmail-mcp/gcp-oauth.keys.json",
+        "GMAIL_CREDENTIALS_PATH": "/Users/YOU/.gmail-mcp/creds-LABEL.json"
+      }
+    },
+    "gdrive-LABEL": {
+      "command": "npx",
+      "args": ["-y", "@isaacphi/mcp-gdrive"],
+      "env": {
+        "CLIENT_ID": "PASTE_CLIENT_ID",
+        "CLIENT_SECRET": "PASTE_CLIENT_SECRET",
+        "GDRIVE_CREDS_DIR": "/Users/YOU/.gdrive-mcp/LABEL"
+      }
+    },
+    "gcal-LABEL": {
+      "command": "npx",
+      "args": ["-y", "@cocal/google-calendar-mcp"],
+      "env": {
+        "GOOGLE_OAUTH_CREDENTIALS": "/Users/YOU/.gcal-mcp/gcp-oauth.keys.json",
+        "GOOGLE_CALENDAR_MCP_TOKEN_PATH": "/Users/YOU/.gcal-mcp/token-LABEL.json"
+      }
+    }
+  }
+}
